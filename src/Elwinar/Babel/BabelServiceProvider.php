@@ -9,7 +9,7 @@ class BabelServiceProvider extends ServiceProvider {
 	 *
 	 * @var bool
 	 */
-	protected $defer = false;
+	protected $defer = true;
 
 	/**
 	 * Bootstrap the application events.
@@ -28,7 +28,10 @@ class BabelServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app->bind('babel.markdown', function()
+		{
+			return new Markdown;
+		});
 	}
 
 	/**
@@ -38,7 +41,7 @@ class BabelServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array();
+		return array('babel.markdown');
 	}
 
 }
