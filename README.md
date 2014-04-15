@@ -6,9 +6,7 @@ Laravel 4 wrappers &amp; engines for various markup languages.
 
 0. Add `elwinar/babel` to your `composer.json`
 
-```
-"elwinar/babel": "dev-master"
-```
+	"elwinar/babel": "dev-master"
 
 0. Run `composer update` to get the latest version of the package.
 0. Edit you `app/config/app.php` to add the following service providers :
