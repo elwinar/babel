@@ -37,6 +37,11 @@ class BabelServiceProvider extends ServiceProvider {
 		{
 			return new MarkdownEngine;
 		});
+
+		$this->app['view']->addExtension('md.php', 'markdown', function()
+		{
+			return new PhpMarkdownEngine;
+		});
 	}
 
 	/**
