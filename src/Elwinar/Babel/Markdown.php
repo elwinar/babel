@@ -1,27 +1,17 @@
 <?php namespace Elwinar\Babel;
 
-use \Illuminate\Filesystem\Filesystem;
-use \Michelf\Markdown as MarkdownParser;
-use \Michelf\MarkdownExtra as MarkdownExtraParser;
+use \Michelf\MarkdownExtra;
 
 class Markdown
 {
-	public static function string($string, $extra = true)
+	public function string($string, $extra = true)
 	{
-		if($extra) {
-			return MarkdownExtraParser::defaultTransform($string);
-		} else {
-			return MarkdownParser::defaultTransform($string);
-		}
+		return MarkdownExtra::defaultTransform($string);
 	}
 
-	public static function file($path, $extra = true)
+	public function file($path, $extra = true)
 	{
-		if($extra) {
-			return MarkdownExtraParser::defaultTransform(file_get_contents($path));
-		} else {
-			return MarkdownParser::defaultTransform(file_get_contents($path));
-		}
+		return MarkdownExtra::defaultTransform(file_get_contents($path));
 	}
 }
 
