@@ -38,9 +38,14 @@ class BabelServiceProvider extends ServiceProvider {
 			return new MarkdownEngine;
 		});
 
-		$this->app['view']->addExtension('md.php', 'markdown', function()
+		$this->app['view']->addExtension('md.php', 'php-markdown', function()
 		{
 			return new PhpMarkdownEngine;
+		});
+
+		$this->app['view']->addExtension('md.blade.php', 'blade-markdown', function()
+		{
+			return new BladeMarkdownEngine($this->app['view']->getEngineResolver()->resolve('blade')->getCompiler());
 		});
 	}
 
