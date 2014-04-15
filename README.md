@@ -37,6 +37,8 @@ Additionally, the package add compilers for the following view extensions :
 - `md.php` using PHP + Markdown
 - `md.blade.php` using Blade + PHP + Markdown
 
+Just create your view with the right extension and let Laravel to the magic for you!
+
 ## Yet another markdown package for Laravel
 
 I know there is already several markdown packages for both PHP and Laravel 4. I was myself fond of the [vtalbot](https://github.com/vtalbot/markdown) package, and occasionally used others as well such as the excellent [kindari](https://github.com/Kindari/laravel-markdown) one.
