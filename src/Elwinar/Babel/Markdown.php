@@ -18,9 +18,9 @@ class Markdown
 	public static function file($path, $extra = true)
 	{
 		if($extra) {
-			return MarkdownExtraParser::defaultTransform(Filesystem::get($path));
+			return MarkdownExtraParser::defaultTransform(file_get_contents($path));
 		} else {
-			return MarkdownParser::defaultTransform(Filesystem::get($path));
+			return MarkdownParser::defaultTransform(file_get_contents($path));
 		}
 	}
 }
