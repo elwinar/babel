@@ -28,6 +28,11 @@ class BabelServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
+		$this->registerMarkdown();
+	}
+
+	public function registerMarkdown()
+	{
 		$this->app->bind('babel.markdown', function()
 		{
 			return new Markdown;

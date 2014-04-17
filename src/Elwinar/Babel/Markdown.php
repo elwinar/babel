@@ -1,6 +1,6 @@
 <?php namespace Elwinar\Babel;
 
-use \Michelf\MarkdownExtra;
+use Michelf\MarkdownExtra;
 
 class Markdown
 {
