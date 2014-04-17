@@ -13,22 +13,23 @@ Laravel 4 wrappers &amp; engines for various markup languages.
 
 	`'Elwinar\Babel\BabelServiceProvider',`
 
-0. Add the following aliases :
+0. And the following aliases :
 
-	`'Elwinar\Babel\Facades\Markdown',`
+	`'Markdown' => 'Elwinar\Babel\Facades\Markdown',`
+	`'Textile' => 'Elwinar\Babel\Facades\Textile',`
 
 ## Usage
 
 You can compile a file
 
 ```
-$result = Markdown::file($path);
+$result = <Facade>::file($path);
 ```
 
 Or a string
 
 ```
-$result = Markdown::string('Hello markdown!');
+$result = <Facade>::string('Hello markdown!');
 ```
 
 Additionally, the package add compilers for the following view extensions :
@@ -36,6 +37,8 @@ Additionally, the package add compilers for the following view extensions :
 - `md` using Markdown
 - `md.php` using PHP + Markdown
 - `md.blade.php` using Blade + PHP + Markdown
+- `tx` using Textile
+- …
 
 Just create your view with the right extension and let Laravel to the magic for you!
 
