@@ -29,6 +29,7 @@ class BabelServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		$this->registerMarkdown();
+		$this->registerTextile();
 	}
 
 	public function registerMarkdown()
@@ -51,6 +52,29 @@ class BabelServiceProvider extends ServiceProvider {
 		$this->app['view']->addExtension('md.blade.php', 'blade-markdown', function()
 		{
 			return new BladeMarkdownEngine($this->app['view']->getEngineResolver()->resolve('blade')->getCompiler());
+		});
+	}
+
+	public function registerTextile()
+	{
+		$this->app->bind('babel.textile', function()
+		{
+			return new Textile;
+		});
+
+		$this->app['view']->addExtension('tx', 'textile', function()
+		{
+			return new TextileEngine;
+		});
+
+		$this->app['view']->addExtension('tx.php', 'php-textile', function()
+		{
+			return new PhpTextileEngine;
+		});
+
+		$this->app['view']->addExtension('tx.blade.php', 'blade-textile', function()
+		{
+			return new BladeTextileEngine($this->app['view']->getEngineResolver()->resolve('blade')->getCompiler());
 		});
 	}
 
