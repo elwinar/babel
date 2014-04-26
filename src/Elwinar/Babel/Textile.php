@@ -20,6 +20,11 @@ class Textile
 	{
 		return $this->parser->textileThis(file_get_contents($path));
 	}
+
+	public function trans()
+	{
+		return $this->string(call_user_func_array(trans, func_get_args()));
+	}
 }
 
 ?>

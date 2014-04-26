@@ -36,6 +36,12 @@ Or a string
 $result = <Facade>::string('Hello markdown!');
 ```
 
+Or a translation using the same parameters than the `trans()` helper of Laravel
+
+```
+$result = <Facade>::trans($key);
+```
+
 Additionally, the package add compilers for the following view extensions :
 
 - `md` using Markdown
