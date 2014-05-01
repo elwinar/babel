@@ -86,7 +86,8 @@ class BabelServiceProvider extends ServiceProvider {
 	public function provides()
 	{
 		return array(
-			'babel.markdown'
+			'babel.markdown',
+			'babel.textile',
 		);
 	}
 

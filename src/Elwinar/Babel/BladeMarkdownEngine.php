@@ -2,7 +2,6 @@
 
 use Illuminate\View\Compilers\CompilerInterface;
 use Illuminate\View\Engines\CompilerEngine;
-use Elwinar\Babel\Facades\Markdown;
 
 class BladeMarkdownEngine extends CompilerEngine
 {
@@ -13,7 +12,7 @@ class BladeMarkdownEngine extends CompilerEngine
 
 	public function get($path, array $data = array())
 	{
-		return Markdown::string(parent::get($path, $data));
+		return Facades\Markdown::string(parent::get($path, $data));
 	}
 }
 
