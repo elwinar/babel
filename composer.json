@@ -1,6 +1,6 @@
 {
     "name": "elwinar/babel",
-    "description": "",
+    "description": "Markup languages engines for Laravel 5",
     "authors": [
         {
             "name": "Romain Baugue",
@@ -8,8 +8,7 @@
         }
     ],
     "require": {
-        "php": "~5.3",
-        "illuminate/support": "~4.1",
+		"laravel/framework": "5.*",
         "michelf/php-markdown": "~1.4",
         "netcarver/textile": "~3.5"
     },
