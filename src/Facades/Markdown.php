@@ -1,4 +1,4 @@
-<?php namespace Elwinar\Babel\Facades;
+<?php namespace Babel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
