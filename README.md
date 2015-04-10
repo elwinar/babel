@@ -9,17 +9,17 @@ Laravel 4 wrappers &amp; engines for various markup languages.
 	`"elwinar/babel": "dev-master"`
 
 0. Run `composer update` to get the latest version of the package.
-0. Edit you `app/config/app.php` to add the following service providers :
+0. Edit your `config/app.php` file to add the following service providers :
 
 	```
-	'Elwinar\Babel\BabelServiceProvider',
+	'Babel\ServiceProvider',
 	```
 
 0. And the following aliases :
 
 	```
-	'Markdown' => 'Elwinar\Babel\Facades\Markdown',
-	'Textile' => 'Elwinar\Babel\Facades\Textile',
+	'Markdown' => 'Babel\Facades\Markdown',
+	'Textile' => 'Babel\Facades\Textile',
 	```
 
 ## Usage
