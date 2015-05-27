@@ -1,4 +1,4 @@
-<?php namespace Elwinar\Babel;
+<?php namespace Babel;
 
 use Michelf\MarkdownExtra;
 

@@ -1,15 +1,8 @@
-<?php namespace Elwinar\Babel;
+<?php namespace Babel;
 
-use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class BabelServiceProvider extends ServiceProvider {
-
-	/**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var bool
-	 */
-	protected $defer = false;
+class ServiceProvider extends BaseServiceProvider {
 
 	/**
 	 * Bootstrap the application events.
@@ -18,7 +11,7 @@ class BabelServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('elwinar/babel');
+		//
 	}
 
 	/**
@@ -76,19 +69,6 @@ class BabelServiceProvider extends ServiceProvider {
 		{
 			return new BladeTextileEngine($this->app['view']->getEngineResolver()->resolve('blade')->getCompiler());
 		});
-	}
-
-	/**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides()
-	{
-		return array(
-			'babel.markdown',
-			'babel.textile',
-		);
 	}
 
 }

@@ -1,23 +1,21 @@
 {
     "name": "elwinar/babel",
     "description": "Markup languages engines for Laravel 5",
+	"license": "Public",
     "authors": [
         {
             "name": "Romain Baugue",
             "email": "romain.baugue@elwinar.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Babel\\": "src/"
+        }
+    },
     "require": {
 		"laravel/framework": "5.*",
         "michelf/php-markdown": "~1.4",
         "netcarver/textile": "~3.5"
-    },
-    "autoload": {
-        "classmap": [
-        ],
-        "psr-0": {
-            "Elwinar\\Babel\\": "src/"
-        }
-    },
-    "minimum-stability": "stable"
+    }
 }

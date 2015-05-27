@@ -1,4 +1,4 @@
-<?php namespace Elwinar\Babel;
+<?php namespace Babel;
 
 use Illuminate\View\Compilers\CompilerInterface;
 use Illuminate\View\Engines\CompilerEngine;
